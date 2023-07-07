@@ -19,7 +19,7 @@ Use PowerShell on Windows, Terminal on Mac/Linux.
 Type the following command in the terminal and hit Enter to run it. 
 
 ```shell
-python --version
+python3 --version
 ```
 
 If that does not work, try `python3 --version` or `py --version`. 
@@ -35,8 +35,8 @@ Wait for each command to finish before running the next one.
 We need the current `rsconnect-python` to deploy our app to shinyapps.io.
 
 ```shell
-python -m pip install --upgrade pip wheel
-python -m pip install --upgrade git+https://github.com/rstudio/rsconnect-python.git
+python3 -m pip install --upgrade pip wheel
+python3 -m pip install --upgrade git+https://github.com/rstudio/rsconnect-python.git
 ```
 
 🚩 You must have `reconnect-python` installed before continuing.
@@ -65,10 +65,10 @@ We **create** a local virtual environment, **activate** it, and **install** the 
 Here's the short version for PowerShell. Run one command at at time and wait for each to finish before running the next one.
 
 ```shell
-python -m venv .venv
+python3 -m venv .venv
 .venv\Scripts\activate
-python -m pip install --upgrade pip wheel
-python -m pip install --upgrade -r requirements.txt
+python3 -m pip install --upgrade pip wheel
+python3 -m pip install --upgrade -r requirements.txt
 ```
  
 🚀 Rocket Tip: Read the instructions below for more details.
@@ -97,8 +97,8 @@ After activating it, notice how the prompt changes to show the active virtual en
 Install the additional free code we need into the active virtual environment. Run on command at a time, waiting for each to finish before running the next one.
 
 ```shell
-python -m pip install --upgrade pip wheel 
-python -m pip install --upgrade -r requirements.txt
+python3 -m pip install --upgrade pip wheel 
+python3 -m pip install --upgrade -r requirements.txt
 ```
 
 It may take a while. Don't worry too much, these are VERY common activities. We'll use them often, and after several projects, they'll become routine.  
