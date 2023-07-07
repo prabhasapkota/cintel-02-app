@@ -18,9 +18,7 @@ In VS Code, use Terminal / New Terminal to open a terminal window.
 Use PowerShell on Windows, Terminal on Mac/Linux.
 Type the following command in the terminal and hit Enter to run it. 
 
-```shell
 python3 --version
-```
 
 If that does not work, try `python3 --version` or `py --version`. 
 Use the command that works instead of `python` in the following instructions. 
@@ -34,10 +32,9 @@ Open a terminal (PowerShell on Windows, Terminal on Mac/Linux) and run the two c
 Wait for each command to finish before running the next one.
 We need the current `rsconnect-python` to deploy our app to shinyapps.io.
 
-```shell
 python3 -m pip install --upgrade pip wheel
 python3 -m pip install --upgrade git+https://github.com/rstudio/rsconnect-python.git
-```
+
 
 🚩 You must have `reconnect-python` installed before continuing.
 
