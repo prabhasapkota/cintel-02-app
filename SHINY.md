@@ -61,7 +61,7 @@ We'll set up a local Python environment with the packages we need for this proje
 We **create** a local virtual environment, **activate** it, and **install** the packages.
 Here's the short version for PowerShell. Run one command at at time and wait for each to finish before running the next one.
 
-```shell
+
 python3 -m venv .venv
 .venv\Scripts\activate
 python3 -m pip install --upgrade pip wheel
@@ -72,7 +72,7 @@ python3 -m pip install --upgrade -r requirements.txt
 
 ### 2A Create a Virtual Environment
 
-The command `python -m venv .venv` creates a virtual environment in a folder named .venv.
+The command `python3 -m venv .venv` creates a virtual environment in a folder named .venv.
 If it works correctly, you will see a new folder named .venv.
 A leading dot is typically used for items hidden by default.
 As an analyst and dashboard developer, be sure you can see hidden folders and files on your machine. 
@@ -93,10 +93,10 @@ After activating it, notice how the prompt changes to show the active virtual en
 
 Install the additional free code we need into the active virtual environment. Run on command at a time, waiting for each to finish before running the next one.
 
-```shell
+
 python3 -m pip install --upgrade pip wheel 
 python3 -m pip install --upgrade -r requirements.txt
-```
+
 
 It may take a while. Don't worry too much, these are VERY common activities. We'll use them often, and after several projects, they'll become routine.  
 
@@ -107,9 +107,9 @@ It may take a while. Don't worry too much, these are VERY common activities. We'
 With your virtual environment **activated**, 
 run the app with the following command:
 
-```shell
+
 shiny run --reload app.py
-```
+
 
 Open the app by following the instructions provided in the terminal. 
 For example, try CTRL CLICK (hit both at the same time) on the URL displayed (http://127.0.0.1:8000).
