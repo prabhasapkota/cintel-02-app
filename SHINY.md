@@ -20,8 +20,7 @@ Type the following command in the terminal and hit Enter to run it.
 
 python3 --version
 
-If that does not work, try `python3 --version` or `py --version`. 
-Use the command that works instead of `python` in the following instructions. 
+
 
 🚀 Rocket Tip: Modify this README.md file to reflect the commands that work on your machine. 
 
@@ -59,14 +58,7 @@ It's pretty easy to use. There's this one-time setup to authorize your machine t
 
 We'll set up a local Python environment with the packages we need for this project. 
 We **create** a local virtual environment, **activate** it, and **install** the packages.
-Here's the short version for PowerShell. Run one command at at time and wait for each to finish before running the next one.
 
-
-python3 -m venv .venv
-.venv\Scripts\activate
-python3 -m pip install --upgrade pip wheel
-python3 -m pip install --upgrade -r requirements.txt
-```
  
 🚀 Rocket Tip: Read the instructions below for more details.
 
