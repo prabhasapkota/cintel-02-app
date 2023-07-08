@@ -16,7 +16,7 @@ from shiny import *
 # Preview at https://bootswatch.com/
 app_ui = ui.page_navbar(
   # Theme code - start
-    shinyswatch.theme.darkly(),
+    shinyswatch.theme.zephyr(),
     # Theme code - end  
   ui.nav(
         "Home",
@@ -72,7 +72,7 @@ def server(input, output, session):
     def insights_output():
         answer = input.location_input()
         count = len(answer)
-        language_string = f'You are from{answer}. That takes{count} characters'
+        language_string = f'You are from {answer}. That takes{count} characters'
         return language_string
 
 # Create a Shiny App by passing in the two parts defined above.
