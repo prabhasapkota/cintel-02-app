@@ -15,16 +15,17 @@ from shiny import *
 # TODO: Change the shinyswatch theme to morph, cosmo, darkly, flatly, sketchy (or other shinyswatch theme)
 # Preview at https://bootswatch.com/
 app_ui = ui.page_navbar(
-    shinyswatch.theme.minty(),
+    shinyswatch.theme.zephyr(),
     ui.nav(
         "Home",
         ui.layout_sidebar(
             ui.panel_sidebar(
-                ui.h2("Sidebar Panel"),
+                ui.h2("Lets start here"),
                 ui.tags.hr(),
-                ui.h3("User Interaction Here"),
-                ui.input_text("name_input", "Prabha", placeholder="Your Name"),
-                ui.input_text("language_input", "python", placeholder="Favorite Programming Language(s)"),
+                ui.h3("Please fill out the information"),
+                ui.input_text("name_input", "Enter your name", placeholder="Enter Your Name"),
+                ui.input_text("location_input", "Enter your location", placeholder="Enter your location"),
+                ui.input_text("hobbies_input", "Enter your hobbies", placeholder="Enter your hobbies")
                 ui.tags.hr(),
             ),
             ui.panel_main(
@@ -35,9 +36,9 @@ app_ui = ui.page_navbar(
         ),
     ),
     # TODO: Update the links to reflect your own about, GitHub repo, and app
-    ui.nav(ui.a("About", href="https://github.com/prabha")),
-    ui.nav(ui.a("GitHub", href="https://github.com/prabha/cintel-02-app")),
-    ui.nav(ui.a("App", href="https://prabha.github.io/cintel-02-app/")),
+    ui.nav(ui.a("About", href="https://github.com/prabhasapkota")),
+    ui.nav(ui.a("GitHub", href="https://github.com/prabhasapkota/cintel-02-app")),
+    ui.nav(ui.a("App", href="https://prabhasapkota.github.io/cintel-02-app/")),
     ui.nav(ui.a("Shiny", href="https://shiny.posit.co/py/")),
     ui.nav(ui.a("Examples", href="https://shinylive.io/py/examples/")),
     ui.nav(ui.a("Themes", href="https://rstudio.github.io/py-shinyswatch/")),
@@ -62,7 +63,7 @@ def server(input, output, session):
     @render.text
     def welcome_output():
         user = input.name_input();
-        welcome_string = f'Hello {user}!';
+        welcome_string = f'Welcome!{user}!';
         return welcome_string
 
     @output
@@ -70,7 +71,7 @@ def server(input, output, session):
     def insights_output():
         answer = input.language_input()
         count = len(answer)
-        language_string = f'You like {answer}. That takes {count} characters'
+        language_string = f'You are from{answer} and hoobies are{answer}. That takes {count} characters'
         return language_string
 
 # Create a Shiny App by passing in the two parts defined above.
