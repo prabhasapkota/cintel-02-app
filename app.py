@@ -15,10 +15,10 @@ from shiny import *
 # TODO: Change the shinyswatch theme to morph, cosmo, darkly, flatly, sketchy (or other shinyswatch theme)
 # Preview at https://bootswatch.com/
 app_ui = ui.page_navbar(
-    # Theme code - start
- shinyswatch.theme.zephyr(),
-    # Theme code - end
-    ui.nav(
+  # Theme code - start
+    shinyswatch.theme.darkly(),
+    # Theme code - end  
+  ui.nav(
         "Home",
         ui.layout_sidebar(
             ui.panel_sidebar(
@@ -70,7 +70,7 @@ def server(input, output, session):
     @output
     @render.text
     def insights_output():
-        answer = input.language_input()
+        answer = input.location_input()
         count = len(answer)
         language_string = f'You are from{answer}. That takes{count} characters'
         return language_string
