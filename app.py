@@ -16,7 +16,7 @@ from shiny import *
 # Preview at https://bootswatch.com/
 app_ui = ui.page_navbar(
   # Theme code - start
-    shinyswatch.theme.Darkly(),
+    shinyswatch.theme.darkly(),
     # Theme code - end  
   ui.nav(
         "Home",
